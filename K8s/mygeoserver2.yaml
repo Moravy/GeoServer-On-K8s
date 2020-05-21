@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mygeo2
+  namespace: ingress-basic
+spec:
+  selector:
+    matchLabels:
+      run: mygeo2
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: mygeo2
+    spec:
+      containers:
+      - name: mygeo2
+        image: kartoza/geoserver
+        ports:
+        - containerPort: 8080
