@@ -11,7 +11,7 @@ metadata:
     nginx.ingress.kubernetes.io/session-cookie-max-age: "5"
 spec:
   rules:
-  - host: 52.142.17.240.nip.io
+  - host: aus.52.142.17.240.nip.io
     http:
       paths:
       - backend:
