@@ -11,10 +11,15 @@ metadata:
     nginx.ingress.kubernetes.io/session-cookie-max-age: "5"
 spec:
   rules:
+  - host: nz.52.142.17.240.nip.io
+    http:
+      paths:
+      - backend:
+          serviceName: mygeo2
+          servicePort: 8080
   - host: aus.52.142.17.240.nip.io
     http:
       paths:
       - backend:
           serviceName: mygeo
           servicePort: 8080
-        path: /
