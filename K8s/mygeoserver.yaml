@@ -18,3 +18,13 @@ spec:
         image: kartoza/geoserver
         ports:
         - containerPort: 8080
+        volumeMounts:
+        - mountPath: "/geoserverdata"
+          name: volume
+        env:
+        - name: GEOSERVER_DATA_DIR
+          value: "/geoserverdata/data"
+      volumes:
+      - name: volume
+        persistentVolumeClaim:
+          claimName: volume
