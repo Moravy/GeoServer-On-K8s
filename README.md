@@ -25,10 +25,11 @@ You can also do this by following the AKS ingress installation.
 https://docs.microsoft.com/en-us/azure/aks/ingress-basic
 
 #### Third, clone the repository or copy everything in from the folder.
-mygeoserver.yaml and mygeoserver2.yaml: is used to deploy GeoServer onto the Cluster. 
-service.yaml and service2.yaml: is used to exposed the deployments with the type of ClusterIP.
+mygeoserver.yaml and mygeoserver2.yaml: is used to deploy GeoServer onto the Cluster.<br> 
+service.yaml and service2.yaml: is used to exposed the deployments with the type of 
+ClusterIP.<br>
 ingress.yaml: Since ClusterIP can only be access by the cluster, ingress.yaml is used to route 
-the HTTP request from outside the cluster to within the cluster. 
+the HTTP request from outside the cluster to within the cluster. <br>
 Volume.yaml: this file create a persistent Volume using Azure Blobstorage.
 
 #### Forth, lets deploy.
@@ -44,7 +45,8 @@ kubectl apply -f ingress.yaml -n ingress-basic
 #### Note
 When replicate more than 1 deployment for example, scale mygeoserver = 2, you will not be able 
 to login to GeoServer because for some reason the session is not sticky. To make the session 
-sticky, you will need to add some nginx-ingress annotation as shown in k8s/ingress.yaml. 
+sticky, you will need to add some nginx-ingress annotation as shown in k8s/ingress.yaml. This 
+mean cookie will be enable.
 
 This should deploys everything. You can check the detail by typing
 ```
