@@ -13,7 +13,7 @@ I will be using Azure Kubernetes Service to deploy the application. Since, LoadB
 3. nginx-ingress.
 4. BlobStorage
 ## Infrastructure
-
+![Diagram](https://github.com/Moravy/GeoServer-On-K8s/blob/master/Diagram.jpg)
 
 ## Getting Started
 #### First, you will need a AKS. 
