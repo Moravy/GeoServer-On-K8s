@@ -2,7 +2,7 @@
 ## Description
 
 This is a simple way of deploying your GeoServer on Kubernetes.The GeoServer is hosted on 
-AKS and ingress to loadbalance and to route the HTTP traffic to multiple hostname at 
+AKS. Using ingress to loadbalance and to route the HTTP traffic to multiple hostname at 
 the same ip address eg. nz.ip.nip.io and aus.ip.nip.io. Each Pods in the GeoServer will be 
 connected to the blob storage using blobfuse for simple update data.  
 
